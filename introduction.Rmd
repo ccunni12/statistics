@@ -1,6 +1,6 @@
 ---
 title: "Introduction and Some Vocabulary"
-output: html_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
