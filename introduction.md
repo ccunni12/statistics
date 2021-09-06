@@ -8,7 +8,7 @@ In a new digit world, just about every company in every industry is looking to u
 
 For most, statistics is a difficult and confusing subject to learn. I have taught statistics at the collegiate level to students of non-quantitative backgrounds and to math/engineering majors. I saw one common trend between the two groups: a solid understanding the vocabulary from the very start of the course is vital. Essentially, if you do not get a solid basis of understanding in the distinction between a statistic and a parameter early on in a statistics course you are left with questions like: why are we testing if the mean is 0 - the question literally says it was .2? Whereas .2 may be a statistic calculated by a sample and the point of the problem is to test whether or not that .2 could have just occured by chance if the true average of the population (the parameter) is actually 0.
 
-Thus this first introductory module is meant to teach the definitions and interpretations of the vocabulary commonly used in statistics education and which will be used in all of the modules which follow this one.
+Thus this first introductory module is meant to teach the definitions and interpretations of the vocabulary commonly used in statistics education and which will be used in all of the modules that follow this one. This is meant to be used as a reference for the other modules.
 
 Parameter vs Statistic
 ----------------------
@@ -17,13 +17,48 @@ For whatever reason, this is a difficult concept for grasp for most students tak
 
 My definitions are as follows:
 
-**Parameter:** a value that describes the distribution of a variable of some POPULATION which is denoted by a GREEK symbol (*μ*, *σ*, *e**t**c*.); we will probably never actually know the true value of a population parameter because it is unrealistic to be able to measure every single subject in the population
+**Parameter:** a value that describes the distribution of a variable of some POPULATION which is denoted by a GREEK symbol (*μ*, *σ*, etc); we will probably never actually know the true value of a population parameter because it is unrealistic to be able to measure every single subject in the population
 
-*Example: If we are animal researchers we might wish to know the weight of all black bears in New Jersey forests. Here the POPULATION we are interested in is all black bears in NJ, the variable we care about is the weight of the bears in NJ, and one way we can summarize or DESCRIBE the weight of all black bears in NJ is to average the weights together. This leads to the POPULATION PARAMETER that we would care about being the average (MEAN) weight of all black bears in NJ.*
+**Statistic:** a value that describes the distribution of a variable of a SAMPLE that comes from a POPULATION which is denoted by an ENGLISH letter ($\\overline{x}$, $\\bar{y}$, *s*<sup>2</sup>, etc.); we do know the exact value of this number because he actually obtain a sample from the population, collect the measurements for each subject in the sample, and then calculate the statistic from them - the whole point of calculating this value is to make a good guess about
 
-Statistic: a value that describes the distribution of a variable of a SAMPLE that comes from a POPULATION which is denoted by an ENGLISH letter ($\\bar{x}, \\bar{y}, s^2,$ etc.); we do know the exact value of this number because he actually obtain a sample from the population, collect the measurements for each subject in the sample, and then calculate the statistic from them - the whole point of calculating this value is to make a good guess about
+**Example**:
 
-*Example: Building off the bear example above, we would find it extremely difficult to capture and weigh every single bear in the forests of NJ. It would make a lot more sense to capture a SAMPLE of bears, weigh those bears and record their weights, and then release them back into their natural habitats. This way, we can calculate the average (MEAN) of the sample and use that SAMPLE STATISTIC to make an educated guess about what the actual POPULATION MEAN is.*
+> *Lets pretend we are animal researchers and we are interested to know the weight of all black bears in New Jersey forests. Here the POPULATION we are interested in is all black bears in NJ, the variable we care about is the weight of the bears in NJ, and one way we can summarize or DESCRIBE the weight of all black bears in NJ is to average the weights together. This leads to the POPULATION PARAMETER that we would care about being the average (MEAN) weight of all black bears in NJ.*
+
+> *However, we would find it extremely difficult to capture and weigh every single bear in the forests of NJ - this is also not practical. It would make a lot more sense to capture a SAMPLE of 40 bears in NJ, weigh those bears and record their weights, and then release them back into their natural habitats. This way, we can calculate the average (MEAN) of the sample and use that SAMPLE STATISTIC (the mean of the weights of 40 bears) to make an educated guess about what the actual POPULATION MEAN is.*
+
+The main takeaway here is that **parameters** values which summarize some detail about a **population** (ie. the actual average weight of all bears in NJ) where **statistics** are values which summarize some detail about a **sample** (ie. the average weight of 40 bears captured, weighed, and released).
+
+Random Variable Types
+---------------------
+
+There are two basic types of variable types:
+
+> **Numeric:** As the name suggests, this type of variable is a number
+
+> There are two types of **Numeric** Variables:
+
+> > **Continuous:** Measured and does not have to be an integer (height, weight, temperature, time, etc.)
+> > **Discrete:** Counted and does have to be an integer (number of cars through an intersection, number of patients at a doctor's office, number of beers in my fridge, etc.)
+
+> **Categorical:** There are two types of **Categorical** Variables
+
+> > **Nominal:** Variables made up of categories with no natural order (color, gender, make of a car, brand of product, etc.) **Ordinal:** Variables made up of categories with a natural order (income levels, education level - HS, BS, MS, PhD, age level - below 25, 25 to 50, greater than 50, etc.)
+
+All of these different types of variables have different ways that they should be quantified, analysed, and visualized as will be seen in the **Data Analysis and Visualization** module.
+
+Sampling and Independence
+-------------------------
+
+**Independence**: simply put, the probability of an event occuring does not change given another event occurred
+
+> **Example 1:** Lets say half of all bears are male and half are female. If you randomly caught a bear, there is a 50% the bear is male. Now lets say you catch a bear who is male. Now if you catch another bear what is the probability that that second bear is male? Is it still 50%? Yes, of course! There is a massive population of bears and catching one male does not change the probability that the second bear you catch is male!
+
+> **Example 2**: Lets say you have a hat with 20 raffle tickets in it. 3 of these raffle tickets win you a gift card, while the other 10 win you nothing. The probability of winning on one draw is then $\\frac{3}{10} = 30%$. You get 2 chances to pull from the hat to try to win gift cards, regardless of the outcome of the first draw. The first draw you make, the raffle ticket is not a winner. What is the probability that you will win on the second draw given that you already removed a losing raffle ticket? Is it still 30%? No! The probability of winning on the second draw is dependent on the result of the outcome of the result of the first draw! Now on your second draw your probability of picking a winner is $\\frac{3}{9} = 33.3%$ because one loser was already removed from the hat! Here, the draws are dependent because of the small population size of just 10 tickets.
+
+> *In the second example above how could we have created a situation where the result of the first and second draws were independent of eachother?*
+
+> How about if there were 10,000 raffle tickets? Then in the same scenario, the probability of winning on the first draw would be $\\frac{3000}{10000} = 30%$ and given your first draw is a loser the probability of a winner on the second draw is $\\frac{3000}{9999} = 30.0003% ~= 30%$. Here, the population of tickets is so large that the probability of a winner of the second draw is basically not affected by the outcome of the first draw - there is independence between the first and second draw.
 
 ``` r
 summary(cars)
